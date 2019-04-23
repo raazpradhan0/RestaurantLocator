@@ -16,6 +16,7 @@ tools:context=".Profile">
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_settings"
         android:layout_width="match_parent"
+        android:background="@color/white"
         android:layout_height="wrap_content">
 
         <RelativeLayout
@@ -27,7 +28,7 @@ tools:context=".Profile">
                 android:id="@+id/close_settings_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:textSize="17sp"
                 android:textStyle="bold"
                 android:layout_alignParentStart="true"
@@ -78,12 +79,13 @@ tools:context=".Profile">
     />
 
 <EditText
-    android:id="@+id/settings_email"
+    android:id="@+id/settings_phone"
     android:layout_width="match_parent"
     android:layout_height="50dp"
     android:layout_below="@+id/profile_image_change_btn"
-    android:hint="Email..."
-    android:inputType="textEmailAddress"
+    android:hint="Phone..."
+    android:inputType="phone"
+    android:imeOptions="actionNext"
     android:layout_margin="15dp"
     android:padding="10dp"
     />
@@ -92,7 +94,8 @@ tools:context=".Profile">
     android:id="@+id/settings_full_name"
     android:layout_width="match_parent"
     android:layout_height="50dp"
-    android:layout_below="@+id/settings_email"
+    android:layout_below="@+id/settings_phone"
+    android:imeOptions="actionNext"
     android:hint="Full Name..."
     android:layout_margin="15dp"
     android:padding="10dp"
@@ -102,6 +105,7 @@ tools:context=".Profile">
     android:id="@+id/settings_address"
     android:layout_width="match_parent"
     android:layout_height="50dp"
+    android:imeOptions="actionNext"
     android:layout_below="@+id/settings_full_name"
     android:hint="Address..."
     android:layout_margin="15dp"
